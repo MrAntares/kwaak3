@@ -91,6 +91,9 @@ public class Game extends Activity {
 			setContentView(mGLSurfaceView);
 			mGLSurfaceView.requestFocus();
 			mGLSurfaceView.setId(1);
+			
+			/* EXPERIMENTAL !!!!!! If game crashes, remove this*/
+			mGLSurfaceView.requestPointerCapture();
 
 			/* The KwaakAudio object is owned by the Game class but is only used
 			 * by the game library using JNI calls. It is not that pretty but it
